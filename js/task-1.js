@@ -1,12 +1,13 @@
-const catRef = document.getElementById('categories');
-const itemRef = document.querySelectorAll('.item');
 
-const licount = catRef.children.length;
-console.log(`В списке ${licount} категории.`);
+"use strict";
 
+const totalCategories = document.querySelectorAll(".item");
+console.log(`В списке ${totalCategories.length} категории.`);
 
-
-catogItemsRef.forEach(item => { 
-    console.log(`Категория: ${item.querySelector('h2').textContent}`);
-    console.log(`Количество элементов: ${item.getElementsByTagName('li').length}`);
-  });
+const categoriesArray = [...totalCategories]
+  .map(
+    categories => `Категория: ${categories.children[0].textContent}
+Количество элементов: ${categories.children[1].children.length}`
+  )
+  .join("\n");
+console.log(categoriesArray);
