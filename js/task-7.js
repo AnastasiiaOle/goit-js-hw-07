@@ -1,7 +1,7 @@
-let controlFont = document.getElementById("font-size-control");
+let inputRef = document.getElementById("font-size-control");
 
 let text = document.getElementById("text");
 
-controlFont.oninput = function() {
-  text.style.fontSize = controlFont.value + "px";
+inputRef.oninput = function() {
+  text.style.fontSize = inputRef.value + "px";
 };
